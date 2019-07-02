@@ -1,12 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Header = () => {
+  return (
+    <h1>Список дел</h1>
+  );
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const SearchBlock = () => {
+  return (
+    <input type="search" placeholder="search" />
+  );
+}
+
+const ToDoList = () => {
+  return (
+    <ul>
+      <li>Изучить Javascript</li>
+      <li>Изучить React</li>
+      <li>Найти работу</li>
+    </ul>
+  );
+}
+
+const Main = () => {
+  return (
+    <div>
+      <Header />
+      <SearchBlock />
+      <ToDoList />
+    </div>
+  );
+}
+
+ReactDOM.render(<Main />, document.getElementById('root'));
