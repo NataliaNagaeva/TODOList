@@ -1,0 +1,19 @@
+.todo-control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.todo-control-panel [type="search"] {
+  flex: 1 0 200px;
+  width: 200px;
+  min-height: 38px;
+  margin-right: 0.5rem;
+}
+
+.todo-control-panel [type="search"],
+.todo-control-panel .btn-group {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}

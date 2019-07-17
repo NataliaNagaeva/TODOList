@@ -1,36 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/header';
+import TodoControlPanel from './components/todoControlPanel';
+import TodoList from './components/todoList';
+import './index.css';
 
-const Header = () => {
-  return (
-    <h1>Список дел</h1>
-  );
-}
+const App = () => {
+  const todoItems = [
+    {id: 0, text: 'Выучить Javascript', important: true},
+    {id: 1, text: 'Выучить React.js', important: true},
+    {id: 2, text: 'Найти работу', important: false}
+  ];
 
-const SearchBlock = () => {
   return (
-    <input type="search" placeholder="search" />
-  );
-}
-
-const ToDoList = () => {
-  return (
-    <ul>
-      <li>Изучить Javascript</li>
-      <li>Изучить React</li>
-      <li>Найти работу</li>
-    </ul>
-  );
-}
-
-const Main = () => {
-  return (
-    <div>
+    <div className="app">
       <Header />
-      <SearchBlock />
-      <ToDoList />
+      <TodoControlPanel />
+      <TodoList items={todoItems} />
     </div>
   );
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
