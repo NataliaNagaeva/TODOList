@@ -4,6 +4,19 @@
   justify-content: space-between;
 }
 
+.todo-list-item.done .todo-list-item_label {
+  text-decoration: line-through;
+}
+
+.todo-list-item.important .todo-list-item_label {
+  font-weight: 700;
+  color: steelblue;
+}
+
+.todo-list-item_label {
+  cursor: pointer;
+}
+
 .todo-list-item_controls {
   flex: 0 0 auto;
 }
